@@ -1,0 +1,385 @@
+@tailwind base;
+@layer base {
+  svg {
+    display: inline;
+    vertical-align: baseline;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+
+
+.react-datepicker-wrapper .react-datepicker__input-container input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 0;
+}
+
+.react-datepicker__day.react-datepicker__day--keyboard-selected {
+  background: none;
+  color: black;
+}
+
+input:focus,
+textarea:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+  --tw-ring-offset-width: none !important;
+}
+
+li:focus-visible {
+  outline: none;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.tab-panel--selected {
+  animation-name: tabPanel;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+@keyframes tabPanel {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Input style */
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  position: absolute;
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.input-container input {
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.ps-menu-icon {
+  width: unset !important;
+  min-width: unset !important;
+  justify-content: start !important;
+  margin: 0 !important;
+}
+
+.ps-menu-button,
+.ps-menu-icon {
+  height: unset !important;
+}
+
+.ps-menu-button:hover {
+  background-color: unset !important;
+}
+
+.ps-sidebar-container,
+.ps-submenu-content {
+  background-color: transparent !important;
+}
+
+.ps-collapsed .ps-menu-icon {
+  min-width: 100% !important;
+  justify-content: center !important;
+}
+
+.ps-collapsed {
+  width: 80px !important;
+}
+
+.ps-sidebar-container,
+.ps-menu-root,
+.ps-menu-root>ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ps-sidebar-root {
+  min-width: unset !important;
+  border: none !important;
+}
+
+.ps-collapsed,
+.ps-collapsed .ps-menu-root,
+.ps-collapsed .ps-menu-button {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+
+.ps-collapsed ul {
+  align-items: center;
+}
+
+.ps-menu-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blue_100_blue_50_c6_border {
+  border-image: linear-gradient(158deg, var(--blue_100), var(--blue_50_c6), );
+}
+
+.blue_100_blue_50_c6_border2 {
+  border-image: linear-gradient(158deg, var(--blue_100), var(--blue_50_c6), );
+}
+
+.blue_100_blue_50_c6_border3 {
+  border-image: linear-gradient(158deg, var(--blue_100), var(--blue_50_c6), );
+}
+
+.light_blue_50_a8_blue_50_56_border {
+  border-image: linear-gradient(180deg, var(--light_blue_50_a8), var(--blue_50_56), );
+}
+
+.blue_100_blue_50_c6_border4 {
+  border-image: linear-gradient(158deg, var(--blue_100), var(--blue_50_c6), );
+}
+
+.blue_100_blue_50_c6_border5 {
+  border-image: linear-gradient(158deg, var(--blue_100), var(--blue_50_c6), );
+}
+
+.blue_100_blue_50_c6_border6 {
+  border-image: linear-gradient(158deg, var(--blue_100), var(--blue_50_c6), );
+}
+
+.light_blue_50_a8_blue_50_56_border2 {
+  border-image: linear-gradient(180deg, var(--light_blue_50_a8), var(--blue_50_56), );
+}
+
+.light_blue_50_f2_gray_50_f2_border {
+  border-image: linear-gradient(180deg, var(--light_blue_50_f2), var(--gray_50_f2), );
+}
+
+.blue_100_blue_50_c6_border7 {
+  border-image: linear-gradient(158deg, var(--blue_100), var(--blue_50_c6), );
+}
+
+.blue_100_blue_50_c6_border8 {
+  border-image: linear-gradient(158deg, var(--blue_100), var(--blue_50_c6), );
+}
+
+.blue_100_blue_50_c6_border9 {
+  border-image: linear-gradient(158deg, var(--blue_100), var(--blue_50_c6), );
+}
+
+.light_blue_50_light_blue_50_2b_border {
+  border-image: linear-gradient(180deg, var(--light_blue_50), var(--light_blue_50_2b), );
+}
+
+.light_blue_50_light_blue_50_2b_border2 {
+  border-image: linear-gradient(180deg, var(--light_blue_50), var(--light_blue_50_2b), );
+}
+
+.light_blue_50_light_blue_50_2b_border3 {
+  border-image: linear-gradient(180deg, var(--light_blue_50), var(--light_blue_50_2b), );
+}
+
+.ant-btn-primary{
+  box-shadow: 3px 3px 8px 3px rgb(3 27 45 / 13%) !important;
+  /*background-color: #2B5182 !important;*/
+}
+
+#MakeupExaminationCenterSelect {
+  /*border: 1px solid rgba(170, 215, 255, 0.15);*/
+  background: rgba(155, 207, 255, 0.13);
+
+}
+
+#MakeupExaminationCenterSelect .ant-select {
+  background: rgba(155, 207, 255, 0);
+  border: 0 ;
+}
+
+#MakeupExaminationCenterSelect .ant-select-selector {
+  background: rgba(155, 207, 255, 0);
+  border: 0 ;
+}
+
+#MakeupExaminationCenterSelect input::placeholder {
+  color: white !important;
+}
+
+.avatar-uploader_img{
+  width:150px !important;
+  height:190px !important;
+}
+
+.avatar-uploader_img >.ant-upload-select{
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.my-overflow-x-auto {
+  overflow-x: auto; /* 允许横向溢出并显示滚动条 */
+}
+
+.my-overflow-x-auto::-webkit-scrollbar {
+  width: 0;
+}
+
+.ant-notification-notice-info .anticon {
+  color: #2b5182 !important; /* 设置图标颜色 */
+}
+
+/*禁用文字颜色*/
+.iconAvailableDisabled {
+  cursor: not-allowed;
+  color: #a9adb3;
+}
+
+.disableTextColor {
+  cursor: not-allowed;
+  color: #a9adb3;
+}
+
+/*编辑文字颜色*/
+.editTextColor {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #2B5182;
+}
+
+/*删除文字颜色*/
+.delTextColor {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #FB6260;
+}
+
+.ant-modal-body {
+  margin-top: 20px;
+}
+.uploadWfull> .ant-upload-wrapper .ant-upload-select {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ant-btn-primary:disabled, .css-dev-only-do-not-override-liw21w.ant-btn-primary.ant-btn-disabled {
+  cursor: not-allowed !important;
+  border-color: #d9d9d9 !important;
+  color: rgba(0, 0, 0, 0.25) !important;
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+.noBorder> .ant-radio-button-wrapper {
+  background-color: transparent !important; /* 设置背景透明 */
+  border: none !important; /* 移除边框 */
+  color: #333 !important; /* 设置文字颜色 */
+  border-radius:0 !important;
+}
+
+.noBorder> .ant-radio-button-wrapper:hover {
+  background-color: #f0f0f0 !important; /* 设置背景色 */
+}
+
+.noBorder>.ant-radio-button-wrapper-checked {
+  background: linear-gradient(to top, #4A87C3, #0A4579) !important;
+  border-radius: 5px !important;
+  color: #fff!important; /* 设置选中文字颜色 */
+}
+
+.noBorder> .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before{
+  display: none !important;
+}
+
+.noBorder > .ant-radio-button-wrapper:not(:first-child)::before{
+  display: none !important;
+}
+
+.ant-upload .ant-upload-select{
+  height: 100% !important;
+}
+
+/*放大Antd Table字体*/
+.ant-table-wrapper .ant-table.ant-table-middle {
+  font-size: 16px;
+}
+
+.ant-modal-title {
+  color: #2B5182 !important;
+}
+
+.ant-modal-footer {
+  text-align: center !important;
+}
+
+.ant-modal-confirm-btns > .ant-btn-primary{
+  background: #2b5182 !important;
+}
+
+.ant-menu-inline > .ant-menu-item,
+.ant-menu-vertical > .ant-menu-item,
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 60px !important;
+  line-height: 60px !important; /* 如果需要垂直居中 */
+}
+
+.ant-menu-inline .ant-menu-item {
+  height: 60px !important;
+  line-height: 60px !important; /* 如果需要垂直居中 */
+}
+
+.ant-menu-inline >.ant-menu-item, .ant-menu-vertical >.ant-menu-item, .ant-menu-inline >.ant-menu-submenu>.ant-menu-submenu-title, .ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title {
+  height: 60px !important;
+  line-height: 60px !important; /* 如果需要垂直居中 */
+}
+
+.ant-modal-content {
+  padding: 0 !important;
+}
+
+.ant-modal-header {
+  padding: 18px 40px !important;
+  background: rgba(43, 81, 130, 0.06) !important;
+  font-size: 18px !important;
+  color: #2B5182 !important;  
+  font-weight: 600 !important;
+}
+
+.ant-modal-body {
+  margin-top: 0 !important;
+  padding: 30px !important;
+}
+
+.ant-modal-footer {
+  margin-top: 0 !important;
+  padding: 20px !important;
+  border-top:  1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.ant-modal .ant-modal-footer .ant-btn+.ant-btn:not(.ant-dropdown-trigger) {
+  margin-inline-start: 20px !important;
+}
+
+.ant-table-wrapper .ant-table-tbody >tr.ant-table-row-selected:hover>td {
+  background: #E1F4FF !important;
+}
+
+.ant-table-wrapper .ant-table-tbody >tr.ant-table-row:hover>td {
+  background: #E1F4FF !important;
+}
+
+.ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before, .ant-table-wrapper .ant-table-thead >tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  width: 0 !important;
+}
+
+.ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload.ant-upload-select, .ant-upload-wrapper.ant-upload-picture-circle-wrapper .ant-upload.ant-upload-select {
+  border: 1px solid rgba(0, 0, 0, 0.10) !important;
+}
