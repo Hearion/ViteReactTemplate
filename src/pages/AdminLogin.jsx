@@ -4,10 +4,13 @@ import {useNavigate} from "react-router-dom";
 import loginImage from "/src/assets/images/admin/login.png";
 import {useState} from "react";
 import {notificationFun} from "@/utils/MessageUtil.js";
+import {useDispatch} from "react-redux";
+import {updateState} from "@/store/app/appSlice.js";
 
 const AdminLogin = () => {
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     
     const [focusIndex, setFocusIndex] = useState(0); // 聚焦索引
     const [value1, setValue1] = useState(''); 
@@ -22,6 +25,9 @@ const AdminLogin = () => {
 
         sessionStorage.setItem('appKey', '123')
         navigate(`/admin/banner`);
+        dispatch(updateState({
+            isLogin: true
+        }))
     }
 
     return (
