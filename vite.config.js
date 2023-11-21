@@ -48,8 +48,6 @@ export default defineConfig(({command, mode}) => {
                 output: {
                     manualChunks: {
                         // 分包
-                        'PinYinPro': ['pinyin-pro'],
-                        'ReactSelect': ['react-select'],
                         'Antd': ['antd'],
                         'ReactRouter': ['react-router', 'react-router-dom'],
                     },
@@ -57,13 +55,13 @@ export default defineConfig(({command, mode}) => {
                     chunkFileNames: 'js/[name]-[hash].js',
                     entryFileNames: 'js/[name]-[hash].js',
                     assetFileNames(assetInfo) {
-                        if (assetInfo.name.endsWith('.css')) {
-                            return 'assets/css/[name].[hash].css'
-                        }
-                        if (['.png', '.jpg', '.jpeg', '.webp', '.svg', '.gif'].some(ext => assetInfo.name.endsWith(ext))) {
-                            return 'assets/img/[name].[hash].[ext]'
-                        }
-                        return 'assets/other/[name].[hash].[ext]'
+                        const { name } = assetInfo;
+                        // 是否是css文件
+                        const isCss = name.endsWith('.css');
+                        // 是否是图片资源
+                        const isImage = ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.gif'].some(ext => name.endsWith(ext));
+                        // 资源路径
+                        return `assets/${isCss ? 'css' : isImage ? 'img' : 'other'}/[name].[hash].[ext]`;
                     }
                 }
             }

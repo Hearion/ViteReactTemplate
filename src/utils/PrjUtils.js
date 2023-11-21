@@ -1,7 +1,7 @@
 import aesFun from "@/utils/aes.js";
 import dayjs from "dayjs";
-import XLSX from "xlsx";
 import saveAs from "@/utils/FileSaver.js";
+import * as XLSX from "xlsx";
 
 //禁用汉字
 export const NoChineseReg = /^[^\u4e00-\u9fa5]+$/;
