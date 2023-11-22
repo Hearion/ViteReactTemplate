@@ -5,6 +5,7 @@ import ErrorPage from "@/pages/ErrorPage.jsx";
 import {updateState} from "@/store/app/appSlice.js";
 import AdminLogin from "@/pages/AdminLogin.jsx";
 import AdminLayout from "@/pages/AdminLayout.jsx";
+import TablePage from "@/pages/TablePage.jsx";
 
 export const IndexRouter = () => {
 
@@ -26,6 +27,7 @@ export const IndexRouter = () => {
 				<Route exact path={"/"} element={<AdminLogin/>} />
 				<Route exact element={<AdminLayout />}>
 					<Route path="*" element={<ErrorPage />} />
+					<Route path="/admin/table" element={<TablePage/>} />
 				</Route>
 			</Route>
 		),

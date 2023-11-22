@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
-import {notificationFun} from "@/utils/MessageUtil.js";
+import {notificationFun} from "@/components/index.js";
 
 const PrivateRoute = ({ children }) => {
 

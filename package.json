@@ -10,12 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ant-design/cssinjs": "^1.16.2",
+    "@ant-design/cssinjs": "^1.17.2",
     "@ant-design/icons": "^5.2.5",
     "@reduxjs/toolkit": "^1.9.5",
     "@wangeditor/editor": "^5.1.23",
     "@wangeditor/editor-for-react": "^1.0.6",
-    "antd": "^5.8.4",
+    "antd": "^5.11.2",
     "dayjs": "^1.11.9",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

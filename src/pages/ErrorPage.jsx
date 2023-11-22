@@ -16,13 +16,13 @@ export default function ErrorPage() {
     }, [])
 
     return (
-        <div style={{width: '100%', height: '100%', minHeight: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div className="w-full h-full min-w-[50vh] flex justify-center items-center">
             {
                 type === 'notFind' ?
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                        <h1>404 - 页面未找到！</h1>
-                        <img style={{width: 60, borderRadius: '50%', marginTop: 30, marginBottom: 20}} src={notFind} alt=""/>
-                        <p style={{marginBottom: 20}}>前面的区域，以后再来探索吧！</p>
+                    <div className="flex flex-col justify-center items-center">
+                        <h1 className="text-2xl">404 - 页面未找到！</h1>
+                        <img className="w-[60px] mt-[30px] mb-[20px] rounded-full" src={notFind} alt=""/>
+                        <p className="mb-[20px]" style={{marginBottom: 20}}>前面的区域，以后再来探索吧！</p>
                         <p>
                             <a onClick={() => { navigate(-1) }}>返回</a>
                         </p>
@@ -30,7 +30,7 @@ export default function ErrorPage() {
                     <div id="error-page">
                         <h1>验证错误！</h1>
                         <p>您的Token不存在或已过期，请尝试重新登陆。</p>
-                        <Space className={'flex center'} style={{justifyContent: 'flex-start'}}>
+                        <Space className="flex center justify-start">
                             <Countdown
                                 format={'s'}
                                 suffix={'秒后'}
@@ -41,7 +41,6 @@ export default function ErrorPage() {
                             <a onClick={() => {navigate('/')}}>
                                 前往登录
                             </a>
-
                         </Space>
                     </div>
             }

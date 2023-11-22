@@ -1,5 +1,5 @@
 import {Input, Select, Space} from "antd";
-import {notificationFun} from "@/utils/MessageUtil.js";
+import {notificationFun} from "@/components/index.js";
 import {useState} from "react";
 
 const { Search } = Input;

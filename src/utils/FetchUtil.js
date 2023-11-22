@@ -1,8 +1,8 @@
 // 定义 Dingo API 的基本地址
-import {notificationWarningFun} from "./MessageUtil.js";
 import {removeLoginData} from "@/utils/SessionStorageData.js";
 import {updateState} from "@/store/app/appSlice.js";
 import {store} from "@/store/store.js";
+import {notificationWarningFun} from "@/components/index.js";
 
 const apiUrl = import.meta.env.VITE_API_BASE_URL;
 

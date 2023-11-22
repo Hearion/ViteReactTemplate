@@ -7,16 +7,18 @@ import {
     LoginOutlined,
     PartitionOutlined,
     SafetyCertificateOutlined,
-    SettingOutlined
+    SettingOutlined,
+    SketchOutlined
 } from "@ant-design/icons";
-import {key_menuData, removeLoginData, removeMenuData} from "@/utils/SessionStorageData.js";
+import {removeLoginData, removeMenuData} from "@/utils/SessionStorageData.js";
 import {deepClone} from "@/utils/PrjUtils.js";
-import {confirmYes} from "@/utils/MessageUtil.js";
 import {useSelector} from "react-redux";
+import {confirmYes} from "@/components/index.js";
 
 const {Header, Content, Sider} = Layout;
 
 const iconData = {
+    'demo': <SketchOutlined />,
     'portal_configuration': <SafetyCertificateOutlined/>,
     'data_online': <GlobalOutlined/>,
     'publicity_data': <SafetyCertificateOutlined/>,

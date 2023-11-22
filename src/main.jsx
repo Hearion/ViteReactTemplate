@@ -4,6 +4,8 @@ import zhCN from 'antd/locale/zh_CN';
 import {StyleProvider} from '@ant-design/cssinjs';
 import {createRoot} from 'react-dom/client';
 import {Provider} from "react-redux";
+import dayjs from "dayjs";
+import 'dayjs/locale/zh-cn';
 
 import {store} from './store/store.js';
 import {IndexRouter} from "./routes/IndexRouter.jsx";
@@ -12,8 +14,8 @@ import './assets/css/font.css';
 import './assets/css/tailwind.css';
 import "./assets/css/color.css";
 import "./assets/css/style.css";
-import dayjs from "dayjs";
-import 'dayjs/locale/zh-cn';
+import MessageUtil from "@/components/MessageUtil/index.jsx";
+import MyTheme from '@/assets/theme/default.js'
 
 dayjs.locale('zh-cn')
 
@@ -25,16 +27,10 @@ root.render(
         <StyleProvider hashPriority="high">
             <ConfigProvider
                 locale={zhCN}
-                theme={{
-                    token: {
-                        colorPrimary: '#2B5182',
-                        colorLink: '#2B5182',
-                        colorInfo: '#2B5182',
-                        borderRadius: 3
-                    },
-                }}
+                theme={MyTheme}
             >
                 <App>
+                    <MessageUtil/>
                     <IndexRouter/>
                 </App>
             </ConfigProvider>

@@ -68,6 +68,16 @@ export const RouterData = {
         },
     },
     admin: {
+        demo: {
+            key: "demo",
+            label: "展示模板",
+            children: {
+                table: {
+                    key: "table",
+                    label: "表格页面",
+                },
+            },
+        },
         portal_configuration: {
             key: "portal_configuration",
             label: "门户配置",

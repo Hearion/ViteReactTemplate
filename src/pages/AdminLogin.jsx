@@ -3,9 +3,9 @@ import {useNavigate} from "react-router-dom";
 
 import loginImage from "/src/assets/images/admin/login.png";
 import {useState} from "react";
-import {notificationFun} from "@/utils/MessageUtil.js";
 import {useDispatch} from "react-redux";
 import {updateState} from "@/store/app/appSlice.js";
+import {notificationFun} from "@/components/index.js";
 
 const AdminLogin = () => {
 
@@ -24,7 +24,7 @@ const AdminLogin = () => {
         if (!checked) return notificationFun('请阅读和同意 《隐私政策》和 《用户服务协议》！');
 
         sessionStorage.setItem('appKey', '123')
-        navigate(`/admin/banner`);
+        navigate(`/admin/table`);
         dispatch(updateState({
             isLogin: true
         }))
