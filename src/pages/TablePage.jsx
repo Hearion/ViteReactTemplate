@@ -1,8 +1,11 @@
 import {LessPagination, notificationErrorFun, PageTitle} from "@/components/index.js";
-import {Button, Space, Tag} from "antd";
+import {Button, Modal, Space, Tag} from "antd";
 import {confirmYes} from "@/components/MessageUtil";
+import {useState} from "react";
 
 const TablePage = () => {
+    
+    const [open, setOpen] = useState(false)
 
     const columns = [
         {
@@ -92,7 +95,7 @@ const TablePage = () => {
                         <Button disabled={true}>次级按钮-禁用</Button>
                         <Button>次级按钮</Button>
                         <Button type={'primary'} disabled={true}>主按钮-禁用</Button>
-                        <Button type={'primary'}>主按钮</Button>
+                        <Button type={'primary'} onClick={() => { setOpen(true) }}>主按钮</Button>
                     </Space>
                 }
             />
@@ -103,7 +106,28 @@ const TablePage = () => {
                 dataProvider={data}
                 pagination={false}
             />
+            <DemoModal
+                open={open}
+                onCancel={() => setOpen(false)}
+                onOk={() => setOpen(false)}
+            />
         </div>
     );
 };
+
+/**
+ * 演示Modal
+ * @param open
+ * @param onCancel
+ * @param onOk
+ * @returns {JSX.Element}
+ * @constructor
+ */
+const DemoModal = ({open, onCancel, onOk}) => {
+    return (
+        <Modal title="演示Modal" open={open} onCancel={onCancel} onOk={onOk} destroyOnClose>
+            内容
+        </Modal>
+    )
+}
 export default TablePage;

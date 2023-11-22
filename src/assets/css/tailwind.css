@@ -12,3 +12,36 @@ body {
   margin: 0;
   line-height: inherit;
 }
+
+/*antd定制*/
+.ant-modal-footer {
+  text-align: center !important;
+}
+
+.ant-modal-confirm-btns > .ant-btn-primary{
+  background: #2b5182 !important;
+}
+
+.ant-modal-content {
+  padding: 0 !important;
+}
+
+.ant-modal-header {
+  padding: 18px 20px !important;
+  background: rgba(43, 81, 130, 0.06) !important;
+}
+
+.ant-modal-body {
+  margin-top: 0 !important;
+  padding: 20px !important;
+}
+
+.ant-modal-footer {
+  margin-top: 0 !important;
+  padding: 10px 20px !important;
+  border-top:  1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.ant-modal .ant-modal-footer .ant-btn+.ant-btn:not(.ant-dropdown-trigger) {
+  margin-inline-start: 20px !important;
+}

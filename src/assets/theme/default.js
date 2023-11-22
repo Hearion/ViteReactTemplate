@@ -17,6 +17,10 @@ export default {
             rowHoverBg: '#E1F4FF',
             rowSelectedBg: '#E1F4FF',
             headerSplitColor: 'rgba(0,0,0,0)'
+        },
+        Modal: {
+            titleFontSize: 18,
+            titleColor: '#2B5182'
         }
     }
 }
