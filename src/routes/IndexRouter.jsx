@@ -3,14 +3,14 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 import {useDispatch} from "react-redux";
 import ErrorPage from "@/pages/ErrorPage.jsx";
 import {updateState} from "@/store/app/appSlice.js";
-import AdminLogin from "@/pages/AdminLogin.jsx";
 import AdminLayout from "@/pages/AdminLayout.jsx";
 import TablePage from "@/pages/TablePage.jsx";
+import IndexPage from "@/pages/IndexPage.jsx";
 
 export const IndexRouter = () => {
 
 	const dispatch = useDispatch();
-	
+
 	const basename = import.meta.env.VITE_ROUTE_BASE_URL;
 
 	// 当组件挂载或组件渲染时执行的效果钩子函数
@@ -24,7 +24,7 @@ export const IndexRouter = () => {
 	const router = createBrowserRouter(
 		createRoutesFromElements(
 			<Route>
-				<Route exact path={"/"} element={<AdminLogin/>} />
+				<Route exact path={"/"} element={<IndexPage/>} />
 				<Route exact element={<AdminLayout />}>
 					<Route path="*" element={<ErrorPage />} />
 					<Route path="/admin/table" element={<TablePage/>} />

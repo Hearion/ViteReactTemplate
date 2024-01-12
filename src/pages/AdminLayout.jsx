@@ -94,13 +94,13 @@ const AdminLayout = () => {
                         backgroundColor: '#2B5182'
                     }}
                 >
-                    <div className="text-[26px] text-[#FFF] ffont-medium">职业技能等级认定管理系统</div>
+                    <div className="text-[26px] text-[#FFF] ffont-medium"> ViteReactTemplate </div>
                     <Space size={10}>
                         <div className="text-[20px] text-[#FFF] font-medium leading-[30px] pb-1">
                             {userInfo.nickName || ''}
                         </div>
-                        <SettingOutlined 
-                            className="text-[18px] text-[#FFF] font-medium cursor-pointer" 
+                        <SettingOutlined
+                            className="text-[18px] text-[#FFF] font-medium cursor-pointer"
                             onClick={() => setChangePasswordOpen(true)}
                         />
                         <LoginOutlined
@@ -151,7 +151,7 @@ const AdminLayout = () => {
                         </Content>
                     </Layout>
                 </Layout>
-                
+
             </Layout>
         </Spin>
     );

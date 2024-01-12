@@ -1,10 +1,10 @@
-import {LessPagination, notificationErrorFun, PageTitle} from "@/components/index.js";
+import {LessPagination, notificationSuccessFun, PageTitle} from "@/components/index.js";
 import {Button, Modal, Space, Tag} from "antd";
 import {confirmYes} from "@/components/MessageUtil";
 import {useState} from "react";
 
 const TablePage = () => {
-    
+
     const [open, setOpen] = useState(false)
 
     const columns = [
@@ -54,7 +54,7 @@ const TablePage = () => {
                     <a className="editTextColor" onClick={() => { confirmYes('测试', () => {}) }}>
                         二次确认
                     </a>
-                    <a className="editTextColor" onClick={() => { notificationErrorFun('操作成功')}}>
+                    <a className="editTextColor" onClick={() => { notificationSuccessFun('操作成功')}}>
                         成功提示
                     </a>
                 </Space>
@@ -89,7 +89,7 @@ const TablePage = () => {
     return (
         <div className="w-full">
             <PageTitle
-                text={'成绩上网'}
+                text={'展示'}
                 button={
                     <Space>
                         <Button disabled={true}>次级按钮-禁用</Button>
