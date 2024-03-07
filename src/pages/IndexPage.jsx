@@ -1,5 +1,6 @@
 import logo from "../assets/images/logo.svg";
 import {useState} from "react";
+import {Button} from "antd";
 
 const IndexPage = () => {
 
@@ -23,16 +24,15 @@ const IndexPage = () => {
                     }
                 </style>
                 <p className="bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-5xl font-black text-transparent selection:bg-transparent">
-                    Vite + React + Tailwindcss v3 + Antd
+                    Vite 4 + React 18 + Tailwindcss v3 + Antd 5
                 </p>
                 <p className="mt-3">
-                    <button
-                        type="button"
-                        className="my-6 rounded bg-gray-300 px-2 py-2 text-[#282C34] transition-all hover:bg-gray-200"
+                    <Button
+                        type={'primary'}
                         onClick={() => setCount((count) => count + 1)}
                     >
                         count is: {count}
-                    </button>
+                    </Button>
                 </p>
                 <p>
                     编辑 <code className="text-[#8d96a7]">IndexPage.jsx</code> 并保存以测试HMR更新。

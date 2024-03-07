@@ -15,20 +15,16 @@ import './assets/css/tailwind.css';
 import "./assets/css/color.css";
 import "./assets/css/style.css";
 import MessageUtil from "@/components/MessageUtil/index.jsx";
-import MyTheme from '@/assets/theme/default.js'
+import defaultTheme from '@/assets/theme/default.js'
 
 dayjs.locale('zh-cn')
-
 
 const root = createRoot(document.getElementById("root"));
 
 root.render(
     <Provider store={store}>
         <StyleProvider hashPriority="high">
-            <ConfigProvider
-                locale={zhCN}
-                theme={MyTheme}
-            >
+            <ConfigProvider locale={zhCN} theme={defaultTheme}>
                 <App>
                     <MessageUtil/>
                     <IndexRouter/>

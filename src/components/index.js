@@ -5,4 +5,4 @@ export { SearchGroup } from "./SearchGroup";
 export { NewEditor } from "./NewEditor"
 export { SearchTree } from "./SearchTree";
 export { AuthSpan } from "./AuthSpan";
-export {messageFunSuccess, notificationFun, notificationWarningFun, notificationErrorFun, notificationSuccessFun, confirmLeftDelect, confirmYes} from "./MessageUtil";
+export {messageFunSuccess, notificationFun, notificationWarningFun, notificationErrorFun, notificationSuccessFun, confirmLeftDelete, confirmYes} from "./MessageUtil";

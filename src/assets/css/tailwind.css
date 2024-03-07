@@ -1,12 +1,13 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   svg {
     display: inline;
     vertical-align: baseline;
   }
 }
-@tailwind components;
-@tailwind utilities;
 
 body {
   margin: 0;
@@ -18,9 +19,9 @@ body {
   text-align: center !important;
 }
 
-.ant-modal-confirm-btns > .ant-btn-primary{
-  background: #2b5182 !important;
-}
+/*.ant-modal-confirm-btns > .ant-btn-primary{*/
+/*  background: #2b5182 !important;*/
+/*}*/
 
 .ant-modal-content {
   padding: 0 !important;

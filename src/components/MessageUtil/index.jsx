@@ -56,7 +56,7 @@ const confirmBase = (content, cancelText, okText, onCancelFunction, onOkFunction
         },
     });
 }
-const confirmLeftDelect = (content, onOk) => {
+const confirmLeftDelete = (content, onOk) => {
     confirmBase(content, "删除", "取消", onOk, null);
 }
 
@@ -64,4 +64,4 @@ const confirmYes = (content, onOk) => {
     confirmBase(content, "确认", "取消", onOk, null);
 }
 
-export {messageFunSuccess, notificationFun, notificationWarningFun, notificationErrorFun, notificationSuccessFun, confirmLeftDelect, confirmYes}
+export {messageFunSuccess, notificationFun, notificationWarningFun, notificationErrorFun, notificationSuccessFun, confirmLeftDelete, confirmYes}
