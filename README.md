@@ -1,4 +1,4 @@
-# React + Vite + Antd + Tailwindcss
+# React 18 + Vite 4 + Antd 5 + Tailwindcss V3
 
 
 - `node` 版本 `V16.19.1`
