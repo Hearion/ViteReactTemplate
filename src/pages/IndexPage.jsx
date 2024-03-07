@@ -35,7 +35,7 @@ const IndexPage = () => {
                     </Button>
                 </p>
                 <p>
-                    编辑 <code className="text-[#8d96a7]">IndexPage.jsx</code> 并保存以测试HMR更新。
+                    编辑 <code className="text-[#8d96a7]">src/pages/IndexPage.jsx</code> 并保存以测试HMR更新。
                 </p>
                 <p className="mt-3 flex gap-3 text-center text-[#8d96a7]">
                     <a

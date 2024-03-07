@@ -128,36 +128,48 @@ export const integerReg = (value) => {
 
 //验证身份证有效并且获得性别(sex)，出生日期(birthday)
 export const validCardIdFun = (cardId) => {
-    let reg = /^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/;
-    if (!reg.test(cardId))
-        return false;
+    if (typeof cardId !== 'string' || cardId.trim() === '') {
+        throw new Error('Invalid ID card number.');
+    }
 
-    if (cardId.length === 15)
-        cardId = cardId.substr(0, 6) + "19" + cardId.substr(6, 9);
-    let args = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+    // 正则表达式验证身份证号码格式
+    const reg = /^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/;
+    if (!reg.test(cardId)) {
+        throw new Error('Invalid ID card number.');
+    }
+
+    // 处理15位身份证号码到18位的转换
+    if (cardId.length === 15) {
+        cardId = cardId.slice(0, 6) + "19" + cardId.slice(6, 15);
+    }
+
+    // 计算和验证校验位
+    const weights = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
     let sum = 0;
     for (let i = 0; i < 17; i++) {
-        sum += args[i] * parseInt(cardId.substring(i, i + 1));
+        sum += weights[i] * parseInt(cardId[i]);
     }
-    sum = sum % 11;
-    let args1 = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2", "x"];
-    if (cardId.length == 17) {
-        cardId = cardId + args1[sum];
+    const checkDigits = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2", "x"];
+    const checkDigit = checkDigits[sum % 11];
+    if (cardId.length === 17) {
+        cardId += checkDigit;
     }
-    // if (cardId.substring(17, 18).toLocaleUpperCase() == args1[sum]) {
-    let birStr = cardId.substr(6, 4) + "-" + cardId.substr(10, 2) + "-" + cardId.substr(12, 2);
-    let obj = new Object();
-    obj.birthdayStr = birStr;
-    let arr = birStr.split("-");
-    obj.birthdayDate = new Date(arr[0], parseInt(arr[1]) - 1, arr[2]);
-    obj.sexStr = Number(cardId.substr(16, 1)) % 2 === 0 ? "女" : "男";
-    obj.sexCode = Number(cardId.substr(16, 1)) % 2 === 0 ? 2 : 1;
 
-    obj.districtCode = cardId.substring(0, 6);
-    return validDate(birStr) ? obj : false;
-    // }
-    // console.log(reg,"regreg");
-    return false;
+    // 解析出生日期和性别
+    const birthdayStr = `${cardId.substr(6, 4)}-${cardId.substr(10, 2)}-${cardId.substr(12, 2)}`;
+    const sexStr = Number(cardId[16]) % 2 === 0 ? "女" : "男";
+    const sexCode = Number(cardId[16]) % 2 === 0 ? 2 : 1;
+
+    // 提取行政区划代码
+    const districtCode = cardId.substring(0, 6);
+    const result = {
+        birthdayStr,
+        birthdayDate: new Date(birthdayStr),
+        sexStr,
+        sexCode,
+        districtCode
+    };
+    return validDate(result.birthdayStr) ? result : false;
 };
 
 //拼装Tree数据
@@ -267,10 +279,7 @@ export const deepClone = (obj) => {
  * @returns {boolean}
  */
 export const isIE = () => {
-    if (!!window.ActiveXObject || "ActiveXObject" in window)
-        return true;
-    else
-        return false;
+    return !!window.ActiveXObject || "ActiveXObject" in window;
 };
 
 /**
@@ -278,7 +287,7 @@ export const isIE = () => {
  * @param data
  * @returns {string}
  */
-export const fixdata = (data) => { 
+export const fixdata = (data) => {
     let o = "",
         l = 0,
         w = 10240;
@@ -287,7 +296,7 @@ export const fixdata = (data) => {
     return o;
 };
 /**
- * 
+ *
  * @param value
  * @returns {boolean}
  */
@@ -297,7 +306,7 @@ export const validMonth = (value) => {
 };
 
 /**
- * 
+ *
  * @param alertFun
  * @param file
  * @param columns
